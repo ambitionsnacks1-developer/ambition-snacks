@@ -35,12 +35,14 @@
      display: flex;
      justify-content: center;
      gap: 30px;
+     flex-wrap: nowrap;
   }
  nav a{
       color: white;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
+      white-space: nowrap;
   }
   nav a:hover{
       text-decoration: underline;
