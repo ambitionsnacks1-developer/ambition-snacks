@@ -34,14 +34,15 @@
      padding: 15px;
      display: flex;
      justify-content: center;
-     gap: 30px;
+     align-items: center;
+     gap: 20px;
      flex-wrap: nowrap;
   }
  nav a{
       color: white;
       text-decoration: none;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 13px;
       white-space: nowrap;
   }
   nav a:hover{
