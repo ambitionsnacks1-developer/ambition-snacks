@@ -1,0 +1,259 @@
+
+/* general reset*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins' ,sans-serif;
+  }
+
+  body{
+   background-color: #fff8e7;
+   color: #333;
+  }
+ /* Heading */
+ h1{
+   font-family:'Pacifico', cursive;
+   color: #e8471d;
+   font-size: 40px;
+   margin-top: 20px;
+  }
+ h2{
+    color: #f5a623;
+    font-size: 22px;
+    margin: 10px 0;
+  }
+ h3{
+   color: #e8471d;
+   margin-top: 30px;
+  }
+
+ /* Navigation*/
+   nav{
+     background-color: #e8471d;
+     padding: 15px;
+     display: flex;
+     justify-content: center;
+     gap: 30px;
+  }
+ nav a{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+  }
+  nav a:hover{
+      text-decoration: underline;
+      color: #fff8e7;
+  }
+  
+ /* image row*/
+  div img{
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0,2);
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+ 
+  div img:hover{
+      transform:scale(1.05);
+  }
+
+ /* tagline */
+  p {
+    font-size: 18px;
+    margin: 15px auto;
+    max-width: 700px;
+  }
+
+ /* why choose us */
+   ol{
+      display: inline-block;
+      text-align: left;
+      background: white;
+      border-radius: 10px;
+      padding: 20px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 15px auto;
+  }
+
+   ol li{
+       padding: 6px 0;
+       font-size: 16px;
+       color: #444;
+  }
+ 
+  /* popular flavours*/
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 10px;
+  }
+
+   ul li{
+      background-color: #f5a623;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+   }
+
+  /* fresh crunchy delicious banner*/
+    div b{
+       font-size: 22px;
+       color: #e8471d;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
