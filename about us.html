@@ -1,102 +1,284 @@
 <!doctype html>
 <html lang="en">
-<head><title>Tasty popcorn</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=pacifico&family=poppins:wght@400;600display=swap" rel="stylesheet">;
-<style>
- *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'poppins',sanserif;
-   }
-  body{
-    background-color: #fff8e7;
-    padding: 30px;
-  }
- h1{
-   text-align: center;
-   font-family: 'pacifico',cursive;
-   color: #e8471d;
-   font-size: 42px;
-   padding: 20px 0;
-  }
- h2{
-   color: #7b1fa2;
-   font-size: 22px;
-   margin: 25px 0 8px;
-   border-left: 5px solid #e8471d;
-   padding-left: 10px;
-  }
- 
- p{
-   font-size: 16px;
-   line-height: 1.8;
-   color: #333;
-   max-width: 800px;
-   margin: 8px auto;
-  }
- img{
-  display: block;
-  margin: 25px auto;
-  width: 300px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  border: 4px solid #f5a623;
-  }
-  </style>
+
+<head>
+    <title>Tasty Popcorn</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #ffd6e7, #fff7c2);
+            font-family: 'Poppins', sans-serif;
+            padding: 30px;
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Main Heading */
+        h1 {
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            color: #e8471d;
+            font-size: 50px;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Section Headings */
+        h2, h3, h4 {
+            color: #7b1fa2;
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-left: 6px solid #e8471d;
+            padding-left: 12px;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+
+        /* Images */
+        img {
+            width: 32px;
+            height: 100px
+            object-fit: cover;
+            border-radius: 18px;
+            border: 4px solid #f5a623;
+            box-shadow: 08px 18px rgba(0,0,0,0.2);
+            transition: 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 22px rgba(0,0,0,0.3);
+        }
+
+        /* Mission Box */
+        .mission-box {
+            background: #fff4e5;
+            border-left: 6px solid #e8471d;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Features Section */
+        ul {
+            margin-top: 15px;
+            margin-left: 30px;
+            margin-bottom: 25px;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        ul li {
+            padding-left: 5px;
+        }
+
+        /* Thank You Text */
+        .thank-you {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #e8471d;
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+
+            padding: 15px 40px;
+            border-radius: 50px;
+
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            box-shadow: 0 6px 18px rgba(221,36,118,0.4);
+
+            transition: 0.4s ease;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: linear-gradient(to right, #dd2476, #ff512f);
+            box-shadow: 0 10px 22px rgba(221,36,118,0.5);
+        }
+
+        /* Button Center */
+        .btn-center {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+
+            h1 {
+                font-size: 38px;
+            }
+
+            h2, h3, h4 {
+                font-size: 24px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .home-btn {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<body style="background-color:pink;">
+
 <body>
-<h1 align="center">About Us</h1>
-<h2><b>Who We Are</b></h2> 
-Welcome to Ambition Snack Product Limited,home of freshly popped, perfectly flavoured popcorn made with love.<br>
-<p>At Ambition Snack Product Limited,we believe that popcorn is more than a snack- it's a tasty, crunchy moment of happiness.<br>Our journey started with a home-based project with one goal to make popcorn that is irresistibly crunchy, delicious, and affordable for everyone.<br>Every batch is prepared fresh using quality gain, clean ingredients, and creative flavours.<br>Whether you want a quick snack, party treats, or popcorn for your shop, we've got you covered.<br></p>
-<img src="corn.png.jpg" alt="corn" width="300" height="250">
-<h3>Our Mission</h3>
-<p>To provide delicious, high-quality popcorn<br>made with  passion, care, and fresh ingredients.<br></p>
-<div style="align:center;">
-<img src="flavoured corn.png.jpg" alt=" ever flavoured" width="400" height="350">
-<img src="more flavours.png.jpg" alt=" best corn"  width="400" height=350">
-</div>
-<h4>What Maskes Us Different</h4>
-  <ul>
-    <li>We prepare our popcorn fresh every day</li>
-    <li>We use clean, high-quality ingredients</li>
-    <li>We offer unique flavours </li>
-    <li>We put our customers first</li>
-  </ul>
-<div>
-<img src="mine.png.jpg" alt="crunchy" width="300" height="250">
-</div>
 
-Thank you for supporting and loving snacks from Ambition Snack Product Limited!<br>
+    <div class="container">
 
+        <h1>🍿 About Us</h1>
 
+        <h2>Who We Are</h2>
 
+        <p class="intro-text">
+            Welcome to <b>Ambition Snack Product Limited</b>, home of freshly popped,
+            perfectly flavoured popcorn made with love.
+        </p>
 
+        <p>
+            At Ambition Snack Product Limited, we believe popcorn is more than just a snack —
+            it is a crunchy moment of happiness. Our journey started as a small home-based
+            project with one goal: to make popcorn that is irresistibly delicious,
+            affordable, and enjoyable for everyone.
+        </p>
 
+        <p>
+            Every batch is prepared fresh using quality grain, clean ingredients,
+            and creative flavours. Whether you need a quick snack, party treats,
+            or popcorn for your shop, we are always ready to serve you.
+        </p>
 
+        <!-- First Image -->
+        <div class="gallery">
+            <img src="corn.png.jpg" alt="Fresh Popcorn">
+        </div>
+        <!-- Mission -->
+        <h3>🎯 Our Mission</h3>
 
+        <div class="mission-box">
 
+            <p>
+                To provide delicious, high-quality popcorn made with passion,
+                care, and fresh ingredients while bringing happiness to every bite.
+            </p>
 
+        </div>
 
+        <!-- More Images -->
+        <div class="gallery">
 
+            <img src="flavoured corn.png.jpg" alt="Flavoured Popcorn" width="70px" >
 
+            <img src="more flavours.png.jpg" alt="More Popcorn Flavours">
 
+        </div>
 
+        <!-- Features -->
+        <h4>✨ What Makes Us Different</h4>
 
+        <ul>
+            <li>We prepare our popcorn fresh every day</li>
+            <li>We use clean, high-quality ingredients</li>
+            <li>We offer unique and exciting flavours</li>
+            <li>We always put our customers first</li>
+            <li>We ensure affordable prices with quality taste</li>
+        </ul>
 
+        <!-- Final Image -->
+        <div class="gallery">
+            <img src="mine.png.jpg" alt="Crunchy Popcorn">
+        </div>
 
+        <!-- Thank You -->
+        <p class="thank-you">
+            ❤️ Thank You For Supporting Ambition Snack Product Limited ❤️
+        </p>
 
+        <!-- Home Button -->
+        <div class="btn-center">
 
+            <a href="home.html" class="home-btn">
+                🏠 Back To Home
+            </a>
 
+        </div>
 
+        <!-- Footer -->
+        <footer>
+            © 2026 Ambition Snack Product Limited | Fresh • Crunchy • Delicious
+        </footer>
 
+    </div>
 
-<a href="home.html">home</a>
 </body>
-</html> 
+
+</html>
