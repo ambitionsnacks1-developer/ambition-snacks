@@ -1,167 +1,472 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><title>INCREDIBLE POPCORN</title>
-<meta charset="UTF-8">
-<style>
-  body{
-    background: linear-gradient(to right, #ffd6e7, #ffe9c7);
-    font-family: arial,sans-serif;
-    margin:0;
-    padding:0;
-  }
- h1{
-     color: #b22222;
-     font-size: 45px;
-     text-shadow: 2px 2px 5px gray;
-  }
- nav a{
-       text-decoration: none;
-       background-color:orange;
-       color: white;
-       padding: 10px 20px;
-       margin: 10px;
-       border-radius: 20px;
-       transition:0.3s;
-  }
- nav a:hover{
-       background-color: darkorange;
-  }
- img{
-     border-radius: 15px;
-     box-shadow: 0px 4px 10px gray;
-     margin: 10px;
-     transition: transform 0.3s;
-  }
-  img:hover{
-     transform: scale(1.05);
-  }
- h2{
-    color:darkred;
-  }
- p{ 
-   font-size: 18px;
-  }
- ol{
-    font-size: 18px;
-  }
 
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<head>
+    <title>Sweet Burst Popcorn</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#fff4f7;
+            color:#333;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:20px 8%;
+
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .logo{
+            font-family:'Pacifico',cursive;
+            font-size:35px;
+            color:#ff3366;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:20px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            background:#ff3366;
+
+            padding:12px 22px;
+            border-radius:40px;
+
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            background:#e62e5c;
+            transform:translateY(-2px);
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            min-height:90vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+            url('picture.jpg.png');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+
+            color:white;
+            padding:20px;
+        }
+
+        .hero-content h1{
+            font-size:70px;
+            font-family:'Pacifico',cursive;
+            margin-bottom:20px;
+        }
+
+        .hero-content p{
+            font-size:24px;
+            margin-bottom:30px;
+        }
+
+        .hero-btn{
+            display:inline-block;
+
+            background:#ff3366;
+            color:white;
+            text-decoration:none;
+
+            padding:16px 35px;
+            border-radius:50px;
+
+            font-size:20px;
+            font-weight:bold;
+
+            transition:0.3s;
+        }
+
+        .hero-btn:hover{
+            background:#e62e5c;
+            transform:translateY(-4px);
+        }
+
+        /* SECTION */
+
+        section{
+            padding:70px 8%;
+        }
+
+        .section-title{
+            text-align:center;
+            font-size:42px;
+            color:#ff3366;
+            margin-bottom:45px;
+            font-family:'Pacifico',cursive;
+        }
+
+        /* CARDS */
+
+        .cards{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            border-radius:25px;
+            overflow:hidden;
+            width:320px;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card img{
+            width:100%;
+            height:240px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+            text-align:center;
+        }
+
+        .card-content h3{
+            color:#ff3366;
+            margin-bottom:10px;
+        }
+
+        .card-content p{
+            font-size:15px;
+            margin-bottom:20px;
+        }
+
+        .order-btn{
+            display:inline-block;
+
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+
+            padding:12px 24px;
+            border-radius:40px;
+
+            font-weight:600;
+        }
+
+        .order-btn:hover{
+            background:#1ebe57;
+        }
+
+        /* WHY US */
+
+        .why-us{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:25px;
+        }
+
+        .why-box{
+            background:white;
+            width:250px;
+
+            padding:25px;
+            border-radius:20px;
+
+            text-align:center;
+
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .why-box h3{
+            color:#ff3366;
+            margin:15px 0;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#ff3366;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            nav ul{
+                flex-direction:column;
+                width:100%;
+                align-items:center;
+            }
+
+            .hero-content h1{
+                font-size:45px;
+            }
+
+            .hero-content p{
+                font-size:18px;
+            }
+
+            .card{
+                width:100%;
+            }
+        }
+
+    </style>
+
 </head>
+
 <body>
-<div style="text-align:center; margin-top:40px;"><img src="idea corn.png" alt="Best choice popcorn" width="200" height="150" b></div>
-<h1 Align="center" ><u>SWEET BURST POPCORN</u></h1>
-<nav>
-<div align="center" margin-top:40px;">
-<a style="padding-right:20px;" href="about us.html">About us</a>
-<a style="padding-right:20px;" href="product orders and delivery.html">Product orders and delivery</a>
-</div>
-</nav>
-<p style="text-align:center; font-size:20px; font-family:Times New Roman;"><strong><i>Freshly Popped, Made with love for sweety taste</i></strong></p>
-<h2 align="center">Welcome to Ambition Snacks Limited-(AS Ltd)</h2>
-<hr>
-<div style=align:center;>
-<img src="plain salted corn.jpg.png" alt="plain corn" width="350" height="300">
-<img src="picture.jpg.png" alt="flavoured" width="350" height="300">
-<img src="flavoured corn.png.jpg" width="350" height="300">
-</div>
-<div style =text-align:center;><b> Fresh. Crunchy. Delicious.</b><br></div>
-<P align="center">We make high-quality popcorn in a variety of exciting flavours<br>perfect for everyday snacking individually, parties, schools, and special events.</p>
-<h3>Why choose Us?</h3>
- <ol type="1">
-   <li>Made fresh everyday</li>
-   <li>Affordable prices</li>
-   <li>Delicious flavours for everyone</li>
-   <li>Perfect for events and bulk orders</li>
- </ol>
-<div>
-<b>
- Our Popular flavours</b><br>
-    <ul>
-       <li>Salted</li>
-       <li>Honey</li>
-       <li>Chocolate</li>
-       <li>Spicy</li>
-       <li>Caramel and Butter</li>
-    </ul>
-<b>
-Order today and enjoy the Crunch.</b><br>
-</div>
-<p><b>More about popcorn snack flavours</b></p>
-<b>
-Salted popcorn<br>
-</b>
- Classic, simple, and lightly salted.A perfect everyday snack.<br>
-<div>
-<img src="plain salted corn.jpg.png" width="400" height="300">
-</div>
-<b>
-Chocolate popcorn<br>
-</b>
- Coated with rich melted cocolate for a sweet treat.<br>
-<div>
-<img src="chocolate.png.jpg" width="400" height="300">
-</div>
-<b>
-Spicy popcorn<br></b>
- A hot and exciting flavour for spice lovers.<br>
-<b>
-Caramel and honey popcorn<br></b>
-Sweet, golden, and crunchy. A customer Favorite!<br>
-<div>
-<img src="delighted corn.png.jpg" width="400" height="300">
-</div>
-<b>
-Custom Flavour<br></b>
-Tell us your preferred flavour-we can make it!<br>
-<h4>Available Sizes</h4>
-  <ul type="square">
-    <li>Small pack- perfect for kids and quick snack</li>
-    <li>Medium pack- best for sharing</li>
-    <li>Large pack- great for families</li>
-    <li>Party Bucket- ideal for events and celebrations</li>
-</ul>
-<div>
-<img src="mine.png.jpg" alt="party bucket popcorn" width="250" height="200">
-</div>
-<b>Fresh taste guaranteed.<br></b>
 
+    <!-- NAVBAR -->
 
-  
+    <nav>
 
+        <div class="logo">
+            🍿 Sweet Burst
+        </div>
 
-       
+        <ul>
 
+            <li><a href="about us.html">About</a></li>
 
+            <li><a href="product orders and delivery.html">Orders</a></li>
 
+        </ul>
 
+    </nav>
 
+    <!-- HERO SECTION -->
 
+    <div class="hero">
 
+        <div class="hero-content">
 
+            <h1>Sweet Burst Popcorn</h1>
 
+            <p>
+                Freshly Popped • Crunchy • Delicious
+            </p>
 
+            <a href="product orders and delivery.html" class="hero-btn">
+                Order Now
+            </a>
 
+        </div>
 
+    </div>
 
+    <!-- ABOUT SECTION -->
 
+    <section>
 
+        <h2 class="section-title">
+            Welcome To AS Ltd
+        </h2>
 
+        <p style="text-align:center; max-width:800px; margin:auto; font-size:18px;">
 
+            We make high-quality popcorn in exciting flavours perfect for
+            everyday snacking, parties, schools, and special events.
 
+        </p>
 
+    </section>
 
+    <!-- POPULAR FLAVOURS -->
 
+    <section>
 
+        <h2 class="section-title">
+            Popular Flavours
+        </h2>
 
+        <div class="cards">
 
+            <!-- CARD 1 -->
 
+            <div class="card">
 
+                <img src="plain salted corn.jpg.png" alt="Salted Popcorn">
 
+                <div class="card-content">
 
+                    <h3>Salted Popcorn</h3>
 
+                    <p>
+                        Classic, simple and lightly salted.
+                    </p>
+
+                    <a href="#" class="order-btn">
+                        Order
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <img src="chocolate.png.jpg" alt="Chocolate Popcorn">
+
+                <div class="card-content">
+
+                    <h3>Chocolate Popcorn</h3>
+
+                    <p>
+                        Rich chocolate flavour for sweet lovers.
+                    </p>
+
+                    <a href="#" class="order-btn">
+                        Order
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <img src="delighted corn.png.jpg" alt="Caramel Popcorn">
+
+                <div class="card-content">
+
+                    <h3>Caramel Popcorn</h3>
+
+                    <p>
+                        Sweet, golden and crunchy favourite.
+                    </p>
+
+                    <a href="#" class="order-btn">
+                        Order
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY CHOOSE US -->
+
+    <section>
+
+        <h2 class="section-title">
+            Why Choose Us?
+        </h2>
+
+        <div class="why-us">
+
+            <div class="why-box">
+
+                <h3>🍿 Fresh Daily</h3>
+
+                <p>
+                    We prepare fresh popcorn every day.
+                </p>
+
+            </div>
+
+            <div class="why-box">
+
+                <h3>💰 Affordable</h3>
+
+                <p>
+                    Great taste at customer-friendly prices.
+                </p>
+
+            </div>
+
+            <div class="why-box">
+
+                <h3>🚚 Fast Delivery</h3>
+
+                <p>
+                    Quick delivery across many areas.
+                </p>
+
+            </div>
+
+            <div class="why-box">
+
+                <h3>⭐ Quality Taste</h3>
+
+                <p>
+                    Premium ingredients and exciting flavours.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Sweet Burst Popcorn |
+        Fresh • Crunchy • Delicious
+
+    </footer>
 
 </body>
+
 </html>
