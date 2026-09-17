@@ -1,7 +1,10 @@
+>
+     
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <title>Sweet Burst Popcorn</title>
 
     <meta charset="UTF-8">
@@ -11,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-  
 
         *{
             margin:0;
@@ -25,56 +27,111 @@
             color:#333;
         }
 
-        /* NAVBAR */
-        
+        /* ================= NAVBAR ================= */
 
         nav{
             display:flex;
-            justify-content:space-between;
             align-items:center;
-            gap: 50px;
 
-            padding:15px;
+            padding:10px 40px;
 
-            background:white;
-            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+            background:rgba(255,255,255,0.9);
 
-            position:sticky;
+            backdrop-filter:blur(10px);
+
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+            position: sticky;
             top:0;
             z-index:1000;
         }
 
+        /* LOGO */
+
         .logo{
-            font-family:'Pacifico',cursive;
-            font-size:35px;
-            color:#ff3366;
-        }
-
-        nav ul{
             display:flex;
-            list-style:none;
-            gap:20px;
-            padding:0 20px;
+            align-items:center;
+
         }
 
-        nav ul li a{
-            text-decoration:none;
+        .logo img{
+            width: 150px;;
+            height:auto;
+
+            object-fit:contain;
+
+            transition:0.3s;
+        }
+
+        .logo img:hover{
+            transform:scale(1.05);
+        }
+
+
+        .snack h1{
+            color: deeppink;
+            font-size: larger;
+            text-transform: uppercase;
+            font-family: 'pacifico', cursive;
+            font-size: 25px;
+            position: relative;
+
+        }
+        /* NAV LINKS */
+
+        nav{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+        
+
+        .nav-link{
+            display: flex;
+            flex-direction: flex;
+            gap: 12px;
+        }
+
+        .nav-link a {
+            display: flex;
+            text-align: center;
+
+            text-decoration: none;
+
             color:white;
             background:#ff3366;
 
-            padding:12px 22px;
+            padding:12px 24px;
+            
             border-radius:40px;
 
             font-weight:600;
+
+            transition:0.3s;
+        }
+
+
+        nav ul li a{
+            text-decoration: none;
+
+            color:white;
+            background:#ff3366;
+
+            padding:12px 24px;
+            
+            border-radius:40px;
+
+            font-weight:600;
+
             transition:0.3s;
         }
 
         nav ul li a:hover{
             background:#e62e5c;
-            transform:translateY(-2px);
+            transform:translateY(-3px);
         }
 
-        /* HERO SECTION */
+        /* ================= HERO SECTION ================= */
 
         .hero{
             min-height:90vh;
@@ -92,13 +149,17 @@
             text-align:center;
 
             color:white;
+
             padding:20px;
         }
 
         .hero-content h1{
-            font-size:70px;
+            font-size:75px;
             font-family:'Pacifico',cursive;
+
             margin-bottom:20px;
+
+            text-shadow:0 4px 10px rgba(0,0,0,0.3);
         }
 
         .hero-content p{
@@ -111,15 +172,19 @@
 
             background:#ff3366;
             color:white;
+
             text-decoration:none;
 
-            padding:16px 35px;
+            padding:16px 36px;
+
             border-radius:50px;
 
             font-size:20px;
             font-weight:bold;
 
             transition:0.3s;
+
+            box-shadow:0 6px 15px rgba(255,51,102,0.4);
         }
 
         .hero-btn:hover{
@@ -127,33 +192,55 @@
             transform:translateY(-4px);
         }
 
-        /* SECTION */
+        /* ================= SECTION ================= */
 
         section{
-            padding:70px 8%;
+            padding:80px 8%;
         }
 
         .section-title{
             text-align:center;
-            font-size:42px;
+
+            font-size:48px;
+
             color:#ff3366;
+
             margin-bottom:45px;
+
             font-family:'Pacifico',cursive;
         }
 
-        /* CARDS */
+        /* ================= ABOUT TEXT ================= */
+
+        .about-text{
+            text-align:center;
+
+            max-width:850px;
+
+            margin:auto;
+
+            font-size:19px;
+
+            line-height:1.9;
+        }
+
+        /* ================= CARDS ================= */
 
         .cards{
             display:flex;
             justify-content:center;
             flex-wrap:wrap;
+
             gap:30px;
         }
 
         .card{
             background:white;
+
             border-radius:25px;
+
             overflow:hidden;
+
             width:320px;
 
             box-shadow:0 5px 15px rgba(0,0,0,0.1);
@@ -168,21 +255,23 @@
         .card img{
             width:100%;
             height:240px;
+
             object-fit:cover;
         }
 
         .card-content{
-            padding:20px;
+            padding:22px;
             text-align:center;
         }
 
         .card-content h3{
             color:#ff3366;
-            margin-bottom:10px;
+            margin-bottom:12px;
+            font-size:25px;
         }
 
         .card-content p{
-            font-size:15px;
+            font-size:16px;
             margin-bottom:20px;
         }
 
@@ -191,37 +280,50 @@
 
             background:#25D366;
             color:white;
+
             text-decoration:none;
 
             padding:12px 24px;
+
             border-radius:40px;
 
             font-weight:600;
+
+            transition:0.3s;
         }
 
         .order-btn:hover{
             background:#1ebe57;
         }
 
-        /* WHY US */
+        /* ================= WHY US ================= */
 
         .why-us{
             display:flex;
             justify-content:center;
             flex-wrap:wrap;
+
             gap:25px;
         }
 
         .why-box{
             background:white;
+
             width:250px;
 
-            padding:25px;
+            padding:30px 25px;
+
             border-radius:20px;
 
             text-align:center;
 
             box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+            transition:0.3s;
+        }
+
+        .why-box:hover{
+            transform:translateY(-6px);
         }
 
         .why-box h3{
@@ -229,33 +331,38 @@
             margin:15px 0;
         }
 
-        /* FOOTER */
+        /* ================= FOOTER ================= */
 
         footer{
             background:#ff3366;
             color:white;
+
             text-align:center;
-            padding:25px;
+
+            padding:28px;
+
             margin-top:50px;
+
+            font-size:18px;
         }
 
-        /* RESPONSIVE */
+        /* ================= RESPONSIVE ================= */
 
-        @media(max-width:768px){
+        @media(max-width:600px){
 
             nav{
+                display:flex;
                 flex-direction:column;
                 gap:20px;
             }
 
             nav ul{
                 flex-direction:column;
-                width:100%;
                 align-items:center;
             }
 
             .hero-content h1{
-                font-size:45px;
+                font-size:48px;
             }
 
             .hero-content p{
@@ -265,6 +372,11 @@
             .card{
                 width:100%;
             }
+
+            .logo img{
+                width:120px;
+            }
+
         }
 
     </style>
@@ -273,31 +385,42 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
+        <!-- LOGO -->
+
         <div class="logo">
-            🍿 Sweet Burst
+
+            <!-- YOUR LOGO -->
+            <img src="idea corn.png.webp" alt="Sweet Burst Logo">
+            
+
         </div>
 
-        <ul>
+        <!-- MENU -->
+         <div class="snack">
+            <h1>Ambition Snack Limited</h1>
+         </div>
+        
+       <div class="nav-link">
+        <a href="about us.html">About</a>
+        <a href="product orders and delivery.html">Order</a>
+       </div>
 
-            <li><a href="about us.html">About</a></li>
-
-            <li><a href="product orders and delivery.html">Orders</a></li>
-
-        </ul>
 
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- ================= HERO SECTION ================= -->
 
     <div class="hero">
 
         <div class="hero-content">
 
-            <h1>Sweet Burst Popcorn</h1>
+            <h1>
+                Sweet Burst Popcorn
+            </h1>
 
             <p>
                 Freshly Popped • Crunchy • Delicious
@@ -311,7 +434,7 @@
 
     </div>
 
-    <!-- ABOUT SECTION -->
+    <!-- ================= ABOUT SECTION ================= -->
 
     <section>
 
@@ -319,7 +442,7 @@
             Welcome To AS Ltd
         </h2>
 
-        <p style="text-align:center; max-width:800px; margin:auto; font-size:18px;">
+        <p class="about-text">
 
             We make high-quality popcorn in exciting flavours perfect for
             everyday snacking, parties, schools, and special events.
@@ -328,7 +451,7 @@
 
     </section>
 
-    <!-- POPULAR FLAVOURS -->
+    <!-- ================= POPULAR FLAVOURS ================= -->
 
     <section>
 
@@ -408,7 +531,7 @@
 
     </section>
 
-    <!-- WHY CHOOSE US -->
+    <!-- ================= WHY CHOOSE US ================= -->
 
     <section>
 
@@ -462,7 +585,7 @@
 
     </section>
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
@@ -472,5 +595,5 @@
     </footer>
 
 </body>
-
 </html>
+```
